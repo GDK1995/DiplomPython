@@ -1,0 +1,48 @@
+.navbar {
+    margin: 0px 32px;
+    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    @include media($xxxl) {
+        margin: 0px 54px;
+    }
+    &_block {
+        padding: 20px 0px;
+        display: flex;
+        &_list {
+            margin: 0px 0px 0px 24px;
+            cursor: pointer;
+            &_sub {
+                padding: 8px 0px 8px 12px;
+                margin: 0px 0px 0px 10px;
+            }
+            &:hover {
+                color: var(--blue);
+            }
+        }
+    }
+    &_bttn {
+        margin: auto 10px;
+        button {
+            cursor: pointer;
+            border: none;
+            background-color: var(--secondary-hover);
+            border-radius: 8px;
+            padding: 8px 18px;
+            color: white;
+            &:hover {
+                background-color: var(--secondary-active);
+            }
+            &:active {
+                background-color: var(--secondary-dis-text);
+            }
+        }
+    }
+}
+
+.selected_tab {
+    color: var(--blue);
+}

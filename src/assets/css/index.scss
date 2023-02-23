@@ -1,0 +1,30 @@
+@import "auth";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
+@import "text";
+@import "breakpoints";
+@import "color";
+@import "navbar";
+@import "main";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Mulish';
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--light-blue);
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+}

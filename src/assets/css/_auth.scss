@@ -1,0 +1,58 @@
+.auth {
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: var(--gray-blue-1);
+    &_block {
+        margin: auto;
+        width: 40%;
+        background-color: var(--gray-blue-light-2);
+        padding: 24px;
+        border-radius: 8px;
+        @include media($xxl) {
+            padding: 40px;
+        }
+        &_input {
+            p {
+                margin: 10px 0px 4px;
+            }
+            input {
+                border-radius: 4px;
+                width: 100%;
+                border: none;
+                padding: 5px 8px;
+                font-size: 14px;
+                @include media($lg) {
+                    padding: 6px 10px;
+                }
+            }
+            &_icon {
+                border-radius: 4px;
+                background-color: white;
+                svg {
+                    margin: auto 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+        &_bttn {
+            button {
+                background-color: var(--gray-blue-1);
+                border: none;
+                padding: 6px 18px;
+                border-radius: 4px;
+                color: white;
+                margin-top: 20px;
+                cursor: pointer;
+                height: 40px;
+                &:hover {
+                    background-color: var(--secondary-hover);
+                }
+                &:active {
+                    background-color: var(--secondary-active);
+                }
+            }
+        }
+    }
+}

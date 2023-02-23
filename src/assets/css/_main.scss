@@ -1,0 +1,79 @@
+.main {
+    margin: 32px;
+    @include media($xxxl) {
+        margin: 32px 54px;
+    }
+    display: flex;
+    flex-direction: row;
+    &_item {
+        min-width: 217px;
+        &_block {
+            display: block;
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            &_sections {
+                margin: 8px 0px;
+                cursor: pointer;
+            }
+        }
+    }
+    &_info {
+        margin: 0px 0px 0px 24px;
+        @include media($xxxl) {
+            width: 100%;
+        }
+        &_block {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: block;
+        }
+    }
+}
+
+.lesson {
+    &_info {
+        margin: 20px 0px 0px;
+        p {
+            margin: 6px 0px;
+        }
+        label {
+            display: block;
+            margin: 5px 0px 5px 24px;
+        }
+    }
+    &_block {
+        display: flex;
+        flex-wrap: wrap;
+        &_item {
+            border: 1px solid var(--gray-2);
+            border-radius: 8px;
+            width: 279px;
+            margin: 24px 24px 0px 0px;
+            cursor: pointer;
+            @include media($xxxl) {
+                width: 353px;
+            }
+            p {
+                cursor: pointer;
+                padding: 16px;
+            }
+        }
+    }
+}
+
+.arrow {
+    color: var(--blue);
+    display: flex;
+    margin: 0px 0px 20px;
+    svg, p {
+        cursor: pointer;
+    }
+    p {
+        margin: auto 3px;
+    }
+}

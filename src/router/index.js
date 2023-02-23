@@ -1,22 +1,59 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/auth/LoginPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Авторизация',
+      layout: 'Empty'
+    }
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/',
+    name: 'main',
+    component: () => import('../views/MainPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Главная страница',
+      layout: 'Main'
+    }
+  },
+  {
+    path: '/teacher',
+    name: 'teacher',
+    component: () => import('../views/TeachersPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Страница преподавателей',
+      layout: 'Main'
+    }
+  },
+  {
+    path: '/log',
+    name: 'log',
+    component: () => import('../views/LogPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Журнал',
+      layout: 'Main'
+    }
+  }
+  ,
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('../views/TestPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Тестирование',
+      layout: 'Main'
+    }
   }
 ]
 

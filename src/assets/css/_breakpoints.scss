@@ -1,0 +1,12 @@
+$sm: 481px; //landscape phones
+$md: 769px; //tablets
+$lg: 993px; //desktops
+$xl: 1201px; //large desktops
+$xxl: 1601px; //extra large desktops
+$xxxl: 1919px; //extra large desktops
+
+@mixin media ($point) {
+  @media (min-width: $point) {
+    @content
+  }
+}

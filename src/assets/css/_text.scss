@@ -1,0 +1,91 @@
+.medium_l {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.medium_bold_l {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.medium_m {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.medium_bold_m {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.medium_s {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.medium_bold_s {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.medium_xs {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.medium_bold_xs {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.heading_4xl_h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 38px;
+    @include media($lg) {
+        font-size: 40px;
+        font-weight: bolder;
+        line-height: 48px;
+    }
+}
+
+.heading_3xl_h2 {
+    font-size: 28px;
+    font-weight: bolder;
+    line-height: 24px;
+    @include media($lg) {
+        font-size: 32px;
+        font-weight: bolder;
+        line-height: 40px;
+    }
+}
+
+.heading_2xl_h3 {
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 32px;
+    @include media($lg) {
+        font-size: 28px;
+        font-weight: bolder;
+        line-height: 34px;
+    }
+}
+
+.heading_xl_h4 {
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 28px;
+    @include media($lg) {
+        font-size: 24px;
+        font-weight: bolder;
+        line-height: 32px;
+    }
+}

@@ -1,0 +1,51 @@
+<template>
+  <div class="navbar">
+    <div class="navbar_block">
+      <router-link to="/"
+        @click.native="selectTab('lesson')"
+        :class="[selected === 'lesson' ? 'selected_tab' : '']"
+        class="navbar_block_list medium_bold_m">
+        Обучение
+      </router-link>
+      <router-link to="/teacher"
+        @click.native="selectTab('teacher')"
+        :class="[selected === 'teacher' ? 'selected_tab' : '']"
+        class="navbar_block_list medium_bold_m">
+        Преподаватели
+      </router-link>
+      <router-link to="/log"
+        @click.native="selectTab('log')"
+        :class="[selected === 'log' ? 'selected_tab' : '']"
+        class="navbar_block_list medium_bold_m">
+        Журнал
+      </router-link>
+      <router-link to="/test"
+        @click.native="selectTab('test')"
+        :class="[selected === 'test' ? 'selected_tab' : '']"
+        class="navbar_block_list medium_bold_m">
+        Тестирование
+      </router-link>
+    </div>
+    <div class="navbar_bttn">
+      <button class="medium_s">
+        ВЫЙТИ
+      </button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'NavbarPage',
+  data () {
+    return {
+      selected: 'lesson'
+    }
+  },
+  methods: {
+    selectTab: function (item) {
+      this.selected = item
+    }
+  }
+}
+</script>
