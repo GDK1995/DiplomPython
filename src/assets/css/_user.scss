@@ -1,0 +1,49 @@
+.user {
+    width: 100%;
+    &_head {
+        display: flex;
+        justify-content: space-between;
+        button {
+            border: none;
+            padding: 8px 16px;
+            background-color: var(--blue);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+                background-color: var(--hovered-blue);
+            }
+            &:active {
+                background-color: var(--pressed-blue);
+            }
+        }
+    }
+    &_table {
+        width: 100%;
+        margin: 24px 0px 0px 0px;
+        border-radius: 8px;
+        table {
+            border-collapse: collapse;
+            thead {
+                tr {
+                    background-color: var(--gray-blue-1);
+                    border-top-right-radius: 8px;
+                    border: 1px solid var(--gray-2);
+                    th {
+                        padding: 4px 16px;
+                        text-align: left;
+                        color: white;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    border: 1px solid var(--gray-2);
+                    td {
+                        padding: 4px 16px;
+                    }
+                }
+            }
+        }
+    }
+}

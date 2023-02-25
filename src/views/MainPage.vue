@@ -26,6 +26,16 @@
           v-if="selectedSections === 4"/>
         <SixthLesson
           v-if="selectedSections === 5"/>
+        <SeventhLesson
+          v-if="selectedSections === 6"/>
+        <EighthLesson
+          v-if="selectedSections === 7"/>
+        <NinethLesson
+          v-if="selectedSections === 8"/>
+        <TenthLesson
+          v-if="selectedSections === 9"/>
+        <EleventhLesson
+          v-if="selectedSections === 10"/>
       </div>
     </div>
   </div>
@@ -38,11 +48,16 @@ import ThirdLesson from '@/components/lessons/ThirdLesson'
 import FourthLesson from '@/components/lessons/FourthLesson'
 import FifthLesson from '@/components/lessons/FifthLesson'
 import SixthLesson from '@/components/lessons/SixthLesson'
+import SeventhLesson from '@/components/lessons/SeventhLesson'
+import EighthLesson from '@/components/lessons/EighthLesson'
+import NinethLesson from '@/components/lessons/NinethLesson'
+import TenthLesson from '@/components/lessons/TenthLesson'
+import EleventhLesson from '@/components/lessons/EleventhLesson'
 
 export default {
   name: 'MainPage',
   components: {
-    FirstLesson, SecondLesson, ThirdLesson, FourthLesson, FifthLesson, SixthLesson
+    FirstLesson, SecondLesson, ThirdLesson, FourthLesson, FifthLesson, SixthLesson, SeventhLesson, EighthLesson, NinethLesson, TenthLesson, EleventhLesson
   },
   data () {
     return {

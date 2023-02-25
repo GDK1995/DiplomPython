@@ -11,7 +11,7 @@
         @click.native="selectTab('teacher')"
         :class="[selected === 'teacher' ? 'selected_tab' : '']"
         class="navbar_block_list medium_bold_m">
-        Преподаватели
+        Пользователи
       </router-link>
       <router-link to="/log"
         @click.native="selectTab('log')"

@@ -1,6 +1,6 @@
 <template>
   <div class="lesson">
-    <p v-if="selectedChapter === 0" class="heading_xl_h4">{{$t('title_6')}}</p>
+    <p v-if="selectedChapter === 0" class="heading_xl_h4">{{$t('title_8')}}</p>
     <div v-if="selectedChapter === 0" class="lesson_block">
       <div
         v-for="(elem, index) in chapters"
@@ -23,26 +23,26 @@
       </svg>
       <p @click="resetChapter">Назад</p>
     </div>
-    <p v-if="selectedChapter === 1" class="heading_xl_h4">{{$t('title_6')}}</p>
-    <p v-if="selectedChapter === 2" class="heading_xl_h4">{{$t('chapter_5_1')}}</p>
-    <p v-if="selectedChapter === 3" class="heading_xl_h4">{{$t('chapter_5_2')}}</p>
+    <p v-if="selectedChapter === 1" class="heading_xl_h4">{{$t('chapter_8_1')}}</p>
+    <p v-if="selectedChapter === 2" class="heading_xl_h4">{{$t('chapter_8_2')}}</p>
+    <p v-if="selectedChapter === 3" class="heading_xl_h4">{{$t('chapter_8_3')}}</p>
     <div
       v-if="selectedChapter !== 0"
       class="lesson_info">
       <div v-if="selectedChapter === 1">
-        <p class="medium_m">{{$t('text_6_1')}}</p>
+        <p class="medium_m">{{$t('text_8_1')}}</p>
         <p class="medium_m">{{$t('text_6_4')}}</p>
         <p class="medium_m">{{$t('text_6_5')}}</p>
         <p class="medium_m">{{$t('text_6_6')}}</p>
       </div>
       <div v-if="selectedChapter === 2">
-        <p class="medium_m">{{$t('text_6_2')}}</p>
+        <p class="medium_m">{{$t('text_8_2')}}</p>
         <p class="medium_m">{{$t('text_6_7')}}</p>
         <p class="medium_m">{{$t('text_6_8')}}</p>
         <p class="medium_m">{{$t('text_6_9')}}</p>
       </div>
       <div v-if="selectedChapter === 3">
-        <p class="medium_m">{{$t('text_6_3')}}</p>
+        <p class="medium_m">{{$t('text_8_3')}}</p>
         <p class="medium_m">{{$t('text_6_10')}}</p>
         <p class="medium_m">{{$t('text_6_11')}}</p>
       </div>
@@ -52,20 +52,20 @@
 
 <script>
 export default {
-  name: 'SixthLesson',
+  name: 'EighthLesson',
   data () {
     return {
       chapters: [{
-        subtitle: `${this.$t('title_6')}`,
-        text: `${this.$t('text_6_1')}`
+        subtitle: `${this.$t('chapter_8_1')}`,
+        text: `${this.$t('text_8_1')}`
       },
       {
-        subtitle: `${this.$t('chapter_6_1')}`,
-        text: `${this.$t('text_6_2')}`
+        subtitle: `${this.$t('chapter_8_2')}`,
+        text: `${this.$t('text_8_2')}`
       },
       {
-        subtitle: `${this.$t('chapter_6_2')}`,
-        text: `${this.$t('text_6_3')}`
+        subtitle: `${this.$t('chapter_8_3')}`,
+        text: `${this.$t('text_8_3')}`
       }],
       selectedChapter: 0
     }
