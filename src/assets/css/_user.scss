@@ -41,9 +41,38 @@
                     border: 1px solid var(--gray-2);
                     td {
                         padding: 4px 16px;
+                        cursor: pointer;
                     }
                 }
             }
         }
+    }
+}
+
+.user_create {
+    margin-top: 24px;
+    &_block {
+        margin: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        label {
+            margin: auto 0px;
+        }
+        input {
+            border: 1px solid var(--gray-1);
+            padding: 8px 13px;
+            border-radius: 8px;
+            margin: 0px 0px 0px 20px;
+            min-width: 400px;
+        }
+    }
+    button {
+        border: none;
+        background-color: var(--blue);
+        border-radius: 8px;
+        color: white;
+        padding: 13px;
+        cursor: pointer;
+        margin: 24px 0px 0px;
     }
 }

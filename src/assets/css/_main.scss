@@ -33,6 +33,35 @@
             display: block;
         }
     }
+    &_test {
+        background-color: white;
+        border-radius: 12px;
+        padding: 24px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: block;
+        &_block {
+            display: flex;
+            flex-wrap: wrap;
+            &_item {
+                border: 1px solid var(--gray-2);
+                // padding: 16px;
+                border-radius: 8px;
+                width: 263px;
+                margin: 0px 12px 24px;
+                cursor: pointer;
+                @include media($xxxl) {
+                    width: 327px;
+                }
+            }
+            &_title {
+                margin: 0px 0px 12px;
+                p {
+                    padding: 16px;
+                }
+            }
+        }
+    }
 }
 
 .lesson {
@@ -50,17 +79,20 @@
         display: flex;
         flex-wrap: wrap;
         &_item {
+            position: relative;
             border: 1px solid var(--gray-2);
             border-radius: 8px;
             width: 279px;
             margin: 24px 24px 0px 0px;
+            display: flex;
+            flex-direction: column;
             cursor: pointer;
             @include media($xxxl) {
                 width: 353px;
             }
             p {
-                cursor: pointer;
                 padding: 16px;
+                cursor: pointer;
             }
         }
     }
@@ -75,5 +107,18 @@
     }
     p {
         margin: auto 3px;
+    }
+}
+
+.start_test {
+    color: var(--blue);
+    position: relative;
+    bottom: 0px;
+    p {
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+        cursor: pointer;
+        padding: 16px;
     }
 }

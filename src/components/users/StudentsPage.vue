@@ -1,8 +1,8 @@
 <template>
   <div class="user">
     <div class="user_head">
-      <p class="heading_xl_h4">{{$t('user_3')}}</p>
-      <button v-if="!isTableVisible" @click="visibilityTable" class="medium_s">{{$t('add_admin')}}</button>
+      <p class="heading_xl_h4">{{$t('user_2')}}</p>
+      <button v-if="!isTableVisible" @click="visibilityTable" class="medium_s">{{$t('add_student')}}</button>
     </div>
     <div class="user_table" v-if="!isTableVisible">
       <table>
@@ -52,13 +52,13 @@
         <label for="">Пароль</label>
         <input type="password" v-model="user.password">
       </div>
-      <button>Сохранить</button>
+      <button class="medium_bold_m">Сохранить</button>
     </form>
   </div>
 </template>
 <script>
 export default {
-  name: 'AdminPage',
+  name: 'StudentPage',
   data () {
     return {
       isTableVisible: false,
@@ -69,7 +69,7 @@ export default {
         phone: '',
         email: '',
         password: '',
-        role: 0
+        role: 2
       },
       userList: []
 
@@ -94,7 +94,7 @@ export default {
       await this.$store.dispatch('getUserList')
         .then((response) => {
           response.data.map(element => {
-            if (element.role === 0) {
+            if (element.role === 2) {
               this.userList.push(element)
             }
           })

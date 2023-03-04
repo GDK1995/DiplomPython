@@ -14,9 +14,9 @@
     </div>
     <div class="main_info">
       <div class="main_info_block">
-        <AdminPage
+        <TeachersPage
           v-if="selectedSections === 0"/>
-        <SecondLesson
+        <StudentsPage
           v-if="selectedSections === 1"/>
         <AdminPage
           v-if="selectedSections === 2"/>
@@ -26,13 +26,14 @@
 </template>
 
 <script>
-import SecondLesson from '@/components/lessons/SecondLesson'
 import AdminPage from '@/components/users/AdminPage'
+import TeachersPage from '@/components/users/TeachersPage'
+import StudentsPage from '@/components/users/StudentsPage'
 
 export default {
   name: 'MainPage',
   components: {
-    SecondLesson, AdminPage
+    TeachersPage, AdminPage, StudentsPage
   },
   data () {
     return {

@@ -27,7 +27,7 @@
       </router-link>
     </div>
     <div class="navbar_bttn">
-      <button class="medium_s">
+      <button @click="logout" class="medium_s">
         ВЫЙТИ
       </button>
     </div>
@@ -39,13 +39,24 @@ export default {
   name: 'NavbarPage',
   data () {
     return {
-      selected: 'lesson'
+      selected: localStorage.getItem('nav')
     }
   },
   methods: {
     selectTab: function (item) {
       this.selected = item
+      localStorage.setItem('nav', this.selected)
+    },
+    logout: function () {
+      this.$router.push('/login')
+      localStorage.clear()
     }
+    // async logout () {
+    //   await this.$store.dispatch('logout')
+    //     .then(() => {
+    //       this.$router.push('/login')
+    //     })
+    // }
   }
 }
 </script>

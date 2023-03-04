@@ -4,12 +4,12 @@
       <p class="heading_2xl_h3" style="text-align: center;">Авторизаия</p>
       <div class="auth_block_input">
         <p class="medium_s">Email:</p>
-        <input type="email">
+        <input type="email" v-model="user.email">
       </div>
       <div class="auth_block_input">
         <p class="medium_s">Пароль:</p>
         <div class="auth_block_input_icon flex">
-          <input :type="[visibilityPsswrd ? 'text' : 'password']">
+          <input v-model="user.password" :type="[visibilityPsswrd ? 'text' : 'password']">
           <svg v-if="!visibilityPsswrd" @click="visiblePassword" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.68686 4.88204C6.09236 1.76844 11.3111 1.76844 14.7166 4.88204L15.2708 5.38871C15.7898 5.86327 16.5953 5.8272 17.0698 5.30815C17.5444 4.7891 17.5083 3.98363 16.9893 3.50907L16.4351 3.0024C12.0566 -1.0008 5.34683 -1.0008 0.968331 3.0024L0.414164 3.50907C-0.104885 3.98363 -0.140952 4.7891 0.333608 5.30815C0.808167 5.8272 1.61365 5.86327 2.1327 5.38871L2.68686 4.88204ZM8.91395 11.2405C10.7894 11.2405 12.3097 9.72013 12.3097 7.84469C12.3097 5.96924 10.7894 4.44889 8.91395 4.44889C7.03851 4.44889 5.51816 5.96924 5.51816 7.84469C5.51816 9.72013 7.03851 11.2405 8.91395 11.2405Z" fill="#004DE7"/>
           </svg>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="auth_block_bttn flex">
-        <button class="medium_s">ВОЙТИ</button>
+        <button class="medium_s" @click="login">ВОЙТИ</button>
       </div>
     </div>
   </div>
@@ -30,13 +30,30 @@ export default {
   name: 'LoginPage',
   data () {
     return {
-      visibilityPsswrd: false
+      visibilityPsswrd: false,
+      user: {
+        email: '',
+        password: ''
+      }
     }
   },
   methods: {
     visiblePassword: function () {
       this.visibilityPsswrd = !this.visibilityPsswrd
+    },
+    login: function () {
+      this.$router.push('/')
+      localStorage.setItem('nav', 'lesson')
     }
+    // async login () {
+    //   await this.$store.dispatch('login', this.user)
+    //     .then(() => {
+    //       this.$router.push('/')
+    //     })
+    //     .catch(err => {
+    //       console.log(err.response.data)
+    //     })
+    // }
   }
 }
 </script>
