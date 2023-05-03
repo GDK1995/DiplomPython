@@ -52,7 +52,7 @@
         <label for="">Пароль</label>
         <input type="password" v-model="user.password">
       </div>
-      <button>Сохранить</button>
+      <button @click="registrate">Сохранить</button>
     </form>
   </div>
 </template>
@@ -103,9 +103,9 @@ export default {
           console.log(err.response.data)
         })
     }
+  },
+  mounted () {
+    this.getUserList()
   }
-  // mounted () {
-  //   this.getUserList()
-  // }
 }
 </script>

@@ -47,16 +47,17 @@ export default {
       this.selected = item
       localStorage.setItem('nav', this.selected)
     },
-    logout: function () {
-      this.$router.push('/login')
-      localStorage.clear()
-    }
-    // async logout () {
-    //   await this.$store.dispatch('logout')
-    //     .then(() => {
-    //       this.$router.push('/login')
-    //     })
+    // logout: function () {
+    //   this.$router.push('/login')
+    //   localStorage.clear()
     // }
+    async logout () {
+      await this.$store.dispatch('logout')
+        .then(() => {
+          this.$router.push('/login')
+          localStorage.clear()
+        })
+    }
   }
 }
 </script>

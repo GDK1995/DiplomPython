@@ -69,7 +69,14 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         axios({
           url: apiUrl + '/api/v1/app/user/create/',
-          data: user,
+          data: {
+            email: user.email,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            password: user.password,
+            phone: user.phone,
+            second_name: user.second_name
+          },
           method: 'POST'
         })
           .then(resp => {

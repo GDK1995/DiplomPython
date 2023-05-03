@@ -41,19 +41,20 @@ export default {
     visiblePassword: function () {
       this.visibilityPsswrd = !this.visibilityPsswrd
     },
-    login: function () {
-      this.$router.push('/')
-      localStorage.setItem('nav', 'lesson')
+    // login: function () {
+    //   this.$router.push('/')
+    //   localStorage.setItem('nav', 'lesson')
+    // },
+    async login () {
+      await this.$store.dispatch('login', this.user)
+        .then(() => {
+          this.$router.push('/')
+          localStorage.setItem('nav', 'lesson')
+        })
+        .catch(err => {
+          console.log(err.response.data)
+        })
     }
-    // async login () {
-    //   await this.$store.dispatch('login', this.user)
-    //     .then(() => {
-    //       this.$router.push('/')
-    //     })
-    //     .catch(err => {
-    //       console.log(err.response.data)
-    //     })
-    // }
   }
 }
 </script>
