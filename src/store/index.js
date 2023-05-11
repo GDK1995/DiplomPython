@@ -11,11 +11,13 @@ const tokenType = 'Bearer'
 export default new Vuex.Store({
   state: {
     status: '',
-    token: localStorage.getItem('token') || ''
+    token: localStorage.getItem('token') || '',
+    preloader: false
   },
   getters: {
     uthStatus: state => state.status,
-    isLoggedIn: state => !!state.token
+    isLoggedIn: state => !!state.token,
+    preloaderState: state => state.preloader
   },
   mutations: {
     auth_success (state, token) {
@@ -29,6 +31,9 @@ export default new Vuex.Store({
       state.status = ''
       state.token = ''
     },
+    preloaderState (state) {
+      state.prelodaer = !state.prelodaer
+    }
   },
   actions: {
     // function to login
@@ -65,18 +70,13 @@ export default new Vuex.Store({
         resolve()
       })
     },
-    registrate (user) {
+    registrate ({ commit }, user) {
+      console.log(user)
       return new Promise((resolve, reject) => {
+        commit('preloaderState')
         axios({
           url: apiUrl + '/api/v1/app/user/create/',
-          data: {
-            email: user.email,
-            first_name: user.first_name,
-            last_name: user.last_name,
-            password: user.password,
-            phone: user.phone,
-            second_name: user.second_name
-          },
+          data: user,
           method: 'POST'
         })
           .then(resp => {
