@@ -48,7 +48,7 @@ const routes = [
   {
     path: '/video-lesson',
     name: 'video-lesson',
-    component: () => import('../views/PracticalPage.vue'),
+    component: () => import('../views/VideoPage.vue'),
     meta: {
       requiresAuth: true,
       title: 'Видео уроки',
