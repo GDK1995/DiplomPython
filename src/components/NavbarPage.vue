@@ -7,23 +7,29 @@
         class="navbar_block_list medium_bold_m">
         Обучение
       </router-link>
-      <router-link to="/teacher"
-        @click.native="selectTab('teacher')"
-        :class="[selected === 'teacher' ? 'selected_tab' : '']"
+      <router-link to="/video-lesson"
+        @click.native="selectTab('video')"
+        :class="[selected === 'video' ? 'selected_tab' : '']"
         class="navbar_block_list medium_bold_m">
-        Пользователи
+        Видеоуроки
       </router-link>
-      <router-link to="/log"
-        @click.native="selectTab('log')"
-        :class="[selected === 'log' ? 'selected_tab' : '']"
+      <router-link to="/practice"
+        @click.native="selectTab('practice')"
+        :class="[selected === 'practice' ? 'selected_tab' : '']"
         class="navbar_block_list medium_bold_m">
-        Журнал
+        Практическая работа
       </router-link>
       <router-link to="/test"
         @click.native="selectTab('test')"
         :class="[selected === 'test' ? 'selected_tab' : '']"
         class="navbar_block_list medium_bold_m">
         Тестирование
+      </router-link>
+      <router-link to="/teacher"
+        @click.native="selectTab('teacher')"
+        :class="[selected === 'teacher' ? 'selected_tab' : '']"
+        class="navbar_block_list medium_bold_m">
+        Пользователи
       </router-link>
     </div>
     <div class="navbar_bttn">

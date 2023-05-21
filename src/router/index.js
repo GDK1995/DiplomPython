@@ -36,16 +36,25 @@ const routes = [
     }
   },
   {
-    path: '/log',
-    name: 'log',
-    component: () => import('../views/LogPage.vue'),
+    path: '/practice',
+    name: 'practice',
+    component: () => import('../views/PracticalPage.vue'),
     meta: {
       requiresAuth: true,
-      title: 'Журнал',
+      title: 'Практическая работа',
       layout: 'Main'
     }
-  }
-  ,
+  },
+  {
+    path: '/video-lesson',
+    name: 'video-lesson',
+    component: () => import('../views/PracticalPage.vue'),
+    meta: {
+      requiresAuth: true,
+      title: 'Видео уроки',
+      layout: 'Main'
+    }
+  },
   {
     path: '/test',
     name: 'test',

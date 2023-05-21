@@ -74,10 +74,6 @@ export default {
       {
         title: `${this.$t('test_1')}`,
         subtitle: `${this.$t('test_1_1')}`
-      },
-      {
-        title: `${this.$t('test_1')}`,
-        subtitle: `${this.$t('test_1_1')}`
       }],
       selectedTest: 0
     }
