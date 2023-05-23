@@ -11,7 +11,8 @@
         mozallowfullscreen="mozallowfullscreen"
         msallowfullscreen="msallowfullscreen"
         oallowfullscreen="oallowfullscreen"
-        webkitallowfullscreen="webkitallowfullscreen">
+        webkitallowfullscreen="webkitallowfullscreen"
+        sandbox>
       </iframe>
     </div>
   </div>

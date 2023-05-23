@@ -76,3 +76,49 @@
         margin: 24px 0px 0px;
     }
 }
+
+.test {
+    button {
+        border: none;
+        background-color: var(--blue);
+        border-radius: 8px;
+        color: white;
+        padding: 13px;
+        cursor: pointer;
+        margin: 24px 0px 0px;
+    }
+    &_block {
+        p {
+            margin: 25px 0px 10px;
+        }
+        ul {
+            list-style-type: none;
+            width: 350px;
+            li {
+                margin: 7px 0px;
+                padding: 5px 5px 5px 10px;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.border_t {
+    border: 1px solid var(--gray-blue);
+}
+
+.border_active {
+    background-color: var(--gray-blue-light-2);
+    border: 1px solid var(--gray-blue-1);
+}
+
+.border_success {
+    background-color: var(--green-light);
+    border: 1px solid var(--dark-green);
+}
+
+.border_fail {
+    background-color: var(--red-light);
+    border: 1px solid var(--red);
+}
