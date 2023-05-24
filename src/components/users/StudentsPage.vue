@@ -17,6 +17,7 @@
             <th style="width: 300px;">Ф.И.О.</th>
             <th style="width: 200px;">Email</th>
             <th style="width: 200px;">Телефон</th>
+            <th style="width: 200px;">Баллы</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +29,7 @@
             <td>{{item.first_name}} {{item.last_name}} {{item.second_name}}</td>
             <td>{{item.email}}</td>
             <td>{{item.phone}}</td>
+            <td>{{item.gpa}}</td>
           </tr>
         </tbody>
       </table>
@@ -61,6 +63,10 @@
         <input type="email" v-model="user.email">
       </div>
       <div class="user_create_block">
+        <label for="">Баллы</label>
+        <input type="number" v-model="user.gpa">
+      </div>
+      <div class="user_create_block">
         <label for="">Пароль</label>
         <input
           type="password"
@@ -85,7 +91,9 @@ export default {
         phone: '',
         email: '',
         password: '',
-        role: 2
+        role: 2,
+        gpa: '',
+        degree: 'degree'
       },
       userList: []
 
@@ -103,7 +111,9 @@ export default {
         phone: '',
         email: '',
         password: '',
-        role: 2
+        role: 2,
+        gpa: '',
+        degree: 'degree'
       }
     },
     async registrate () {
